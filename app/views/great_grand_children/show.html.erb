@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @great_grand_child.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @great_grand_child.last_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @great_grand_child.gender %>
+</p>
+
+<p>
+  <strong>Grand child:</strong>
+  <%= @great_grand_child.grand_child_id %>
+</p>
+
+<%= link_to 'Edit', edit_great_grand_child_path(@great_grand_child) %> |
+<%= link_to 'Back', great_grand_children_path %>
