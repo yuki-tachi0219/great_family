@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Great Grand Children</h1>
+<h2>曾孫世代</h2>
 
 <table>
   <thead>
@@ -9,6 +9,7 @@
       <th>Last name</th>
       <th>Gender</th>
       <th>Grand child</th>
+      <th>先祖</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,9 @@
         <td><%= great_grand_child.last_name %></td>
         <td><%= great_grand_child.gender %></td>
         <td><%= great_grand_child.grand_child_id %></td>
+        <% if true %>
+        <td><%= great_grand_child.grand_child.child.parent.grand_parent.great_grand_parent.last_name %><%= great_grand_child.grand_child.child.parent.grand_parent.great_grand_parent.first_name %></td>
+        <% end %>
         <td><%= link_to 'Show', great_grand_child %></td>
         <td><%= link_to 'Edit', edit_great_grand_child_path(great_grand_child) %></td>
         <td><%= link_to 'Destroy', great_grand_child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
