@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Parents</h1>
+<h2>親世代</h2>
 
 <table>
   <thead>
@@ -28,6 +28,9 @@
   </tbody>
 </table>
 
+<br>
+<%= link_to '子世代へ', children_path %>
+<br>
 <br>
 
 <%= link_to 'New Parent', new_parent_path %>

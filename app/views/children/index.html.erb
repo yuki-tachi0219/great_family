@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Children</h1>
+<h2>子世代</h2>
 
 <table>
   <thead>
@@ -29,5 +29,7 @@
 </table>
 
 <br>
-
+<%= link_to '孫世代へ', grand_children_path %>
+<br>
+<br>
 <%= link_to 'New Child', new_child_path %>
