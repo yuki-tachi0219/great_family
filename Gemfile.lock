@@ -69,6 +69,8 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     ffi (1.15.5)
+    gimei (1.1.0)
+      romaji
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.11.0)
@@ -135,6 +137,8 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    romaji (0.2.4)
+      rake (>= 0.8.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -182,6 +186,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  gimei
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
