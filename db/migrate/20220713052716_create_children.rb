@@ -5,6 +5,7 @@ class CreateChildren < ActiveRecord::Migration[6.1]
       t.string :last_name
       t.integer :gender
       t.integer :parent_id
+      t.integer :seminar_id
 
       t.timestamps
     end

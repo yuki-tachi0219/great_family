@@ -1,4 +1,10 @@
 ActiveRecord::Base.transaction do
+  country = Country.create!(name: "USA")
+  state = country.states.create!(name: "アリゾナ")
+  school_category = SchoolCategory.create!(name: "高校")
+  school = School.create!(name: "テストスクール", state: state, school_category: school_category)
+  school.seminars.create!(name: "テストセミナー")
+
   common_last_name = "桂木"
   great_grand_parent = GreatGrandParent.create!(last_name: common_last_name, first_name: "大治郎", gender: 0)
   birth_number_array = [3, 3, 3, 3, 3]
@@ -22,7 +28,7 @@ ActiveRecord::Base.transaction do
 
       birth_number_array[2].times do |k|
         gender = ["male", "female"].sample
-        child = parent.children.create!(last_name: common_last_name, first_name: Gimei.send(gender).first.hiragana, gender: gender)
+        child = parent.children.create!(last_name: common_last_name, first_name: Gimei.send(gender).first.hiragana, gender: gender, seminar_id: 1)
         next if k == birth_number_array[2] -1
 
         birth_number_array[3].times do |l|
@@ -39,4 +45,6 @@ ActiveRecord::Base.transaction do
       end
     end
   end
+
+  Child.first.articles.create(content: "hogehoge")
 end
