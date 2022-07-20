@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Gender</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @great_grand_parents.each do |great_grand_parent| %>
       <tr>
+        <td><%= great_grand_parent.id %></td>
         <td><%= great_grand_parent.first_name %></td>
         <td><%= great_grand_parent.last_name %></td>
         <td><%= great_grand_parent.gender %></td>
