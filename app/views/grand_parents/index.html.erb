@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h2>祖父世代</h2>
+<%= link_to '曾祖父世代へ', great_grand_parents_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Gender</th>
+      <th>Great grand parent ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grand_parents.each do |grand_parent| %>
+      <tr>
+        <td><%= grand_parent.id %></td>
+        <td><%= grand_parent.first_name %></td>
+        <td><%= grand_parent.last_name %></td>
+        <td><%= grand_parent.gender %></td>
+        <td><%= grand_parent.great_grand_parent_id %></td>
+        <td><%= link_to 'Show', grand_parent %></td>
+        <td><%= link_to 'Edit', edit_grand_parent_path(grand_parent) %></td>
+        <td><%= link_to 'Destroy', grand_parent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to '親世代へ', parents_path %>
+<br>
+<br>
+
+<%= link_to 'New Grand Parent', new_grand_parent_path %>
