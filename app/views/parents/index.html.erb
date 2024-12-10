@@ -21,7 +21,7 @@
         <td><%= parent.id %></td>
         <td><%= parent.first_name %></td>
         <td><%= parent.last_name %></td>
-        <td><%= parent.gender %></td>
+        <td><%= Parent.human_attribute_name("gender.#{parent.gender}") %></td>
         <td><%= parent.grand_parent_id %></td>
         <td><%= link_to 'Show', parent %></td>
         <td><%= link_to 'Edit', edit_parent_path(parent) %></td>

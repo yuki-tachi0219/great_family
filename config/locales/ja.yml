@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      parent: 親
+    attributes:
+      parent/gender:
+        male: 男性
+        female: 女性
